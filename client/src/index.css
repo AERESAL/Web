@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&family=Montserrat:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 133 28% 40%; /* #4B7F52 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 36 53% 36%; /* #8C5E2A */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 43 63% 56%; /* #DEB041 */
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Custom colors */
+  --neutral: 60 20% 95%; /* #F4F4F0 */
+  --dark: 120 18% 20%; /* #2B3D2B */
+  --alert: 25 100% 40%; /* #CC5500 */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 133 28% 40%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 36 53% 36%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 43 63% 56%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --neutral: 60 10% 15%;
+  --dark: 120 18% 10%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-body antialiased bg-[#F4F4F0] text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  .font-accent {
+    @apply font-montserrat;
+  }
+}
+
+/* Custom classes */
+.bg-neutral {
+  background-color: hsl(var(--neutral));
+}
+
+.bg-dark {
+  background-color: hsl(var(--dark));
+}
+
+.bg-alert {
+  background-color: hsl(var(--alert));
+}
+
+.text-dark {
+  color: hsl(var(--dark));
+}
